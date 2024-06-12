@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecom Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="container-in">
+            <nav>
+                <div class="nav-in">
+                    <div class="nav-in-one">
+                        <a href="#">
+                            <button>
+                                Back Home
+                            </button>
+                        </a>
+                    </div>
+                    <div class="nav-in-two">
+                        <h1>Ecom</h1>
+                    </div>
+                    <div class="nav-in-three">
+                        <a href="#">
+                            <button>Help</button>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+            <div class="login-form">
+                <div class="login-one">
+                    <img src="https://img.freepik.com/free-vector/mobile-login-concept-illustration_114360-83.jpg" alt="">
+                </div>
+                <div class="login-two-in">
+                    <div class="login-two" id="login-form">
+                        <h1>Get started with login <br> happy shopping!</h1>
+                        <form action="">
+                            <div class="email">
+                                <label for="">Email</label>
+                                <input type="text" placeholder="Enter your email">
+                            </div>
+                            <div class="password">
+                                <label for="">Password</label>
+                                <input type="password" placeholder="Enter your password">
+                            </div>
+                            <button onclick="verify()" id="login">
+                                <a href="/Ecom/index.html">Login</a>
+                            </button>
+                            <a href="#">Forgot Password?</a>
+                            <a href="javascript:void(0);" onclick="toggleForm()">
+                                <button id="SignUp" type="button">
+                                    Create an account
+                                </button>
+                            </a>
+                        </form>
+                    </div>
+                    <div class="login-two" id="signup-form" style="display: none;">
+                        <h1>Create your account</h1>
+                        <form action="">
+                            <div class="email">
+                                <label for="">Email</label>
+                                <input type="text" placeholder="Enter your email">
+                            </div>
+                            <div class="password">
+                                <label for="">Password</label>
+                                <input type="password" placeholder="Enter your password">
+                            </div>
+                            <div class="confirm-password">
+                                <label for="">Confirm Password</label>
+                                <input type="password" placeholder="Confirm your password">
+                            </div>
+                            <button onclick="signup()" id="signup">
+                                <a href="/Ecom/index.html">Sign Up</a>
+                            </button>
+                            <a href="#" onclick="toggleForm()">Already have an account? Login</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <p>Designed and Developed for Ecom</p>
+                <p>All rights reserved @2024</p>
+            </footer>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: #f1f1f1;
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-in{
+    /* padding: 1rem; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+nav{
+    width: 100%;
+    padding: 1rem;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    border-bottom: 1px solid #333;
+}
+.nav-in{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.nav-in-one button{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 10px;
+    background-color: orange;
+    font-size: 0.8rem;
+}
+.nav-in-two h1{
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #333;
+}
+.nav-in-three button{
+    padding: 0.5rem;
+    border-radius: 10px;
+    background-color: orange;
+    font-size: 0.8rem;
+}
+.nav-in button:hover{
+    background-color: #ff4500;
+}
+.login-form{
+    width: 100%;
+    padding: 1rem;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.login-one
+{
+    width: 50%;
+    /* background-color: red; */
+}
+.login-one img{
+    mix-blend-mode: multiply    ;
+}
+.login-two{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    /* background-color: blue; */
+}
+.login-two h1{
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #333;
+    text-align: center;
+}
+.login-two-in{
+    padding: 1rem;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: centere;
+    border-radius: 10px;
+    border: 1px solid #333;
+    /* padding: 1rem; */
+    background-color: aliceblue;
+    /* background-color: red; */
+}
+form{
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    /* background-color: red; */
+}
+.email{
+    width: 100%;
+    margin: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 1rem; */
+    /* background-color: red; */
+}
+.email input{
+    width: 70%;
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: 1px solid #333;
+}
+.password{
+    width: 100%;
+    margin: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 1rem; */
+}
+.password input
+{
+    width: 70%;
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: 1px solid #333;
+}
+#login{
+    width: 50%;
+    padding: 0.5rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
+    /* font-size: 1.3rem; */
+}
+#SignUp{
+    width: 100%;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
+    border-radius: 10px;
+    /* background-color: red; */
+}
+.login-two a{
+    text-decoration: none;
+    color: #333;
+}
+.confirm-password{
+    width: 100%;
+    margin: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 1rem; */
+}
+.confirm-password input{
+    width: 70%;
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: 1px solid #333;
+}
+#signup-form button{
+    width: 50%;
+    padding: 0.5rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
+    /* font-size: 1.3rem; */
+
+}
+footer{
+    width: 100%;
+    padding: 1rem;
+    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #333;
+}
