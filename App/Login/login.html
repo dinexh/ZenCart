@@ -17,7 +17,7 @@
                         </a>
                     </div>
                     <div class="nav-in-two">
-                        <h1>Ecom</h1>
+                        <h1>ZenCart</h1>
                     </div>
                     <div class="nav-in-three">
                         <button onclick="openHelpModal()">Help</button>
@@ -40,8 +40,8 @@
                                 <label for="password">Password:</label>
                                 <input type="password" id="password" placeholder="Enter your password">
                             </div>
-                            <button type="button" onclick="verify()">Login</button>
-                            <a href="#">Forgot Password?</a>
+                            <button type="button" >Login</button>
+                            <a href="#" onclick="openForgotPasswordModal()">Forgot Password?</a>
                             <button type="button" onclick="toggleForm()">Create an account</button>
                         </form>
                     </div>
@@ -65,9 +65,24 @@
                                 <input type="password" id="confirm-password" placeholder="Confirm your password">
                             </div>
                             <button type="button" onclick="signup()">Sign Up</button>
-                            <a href="javascript:void(0);" onclick="toggleForm()">Already have an account? Login</a>
+                            <a href="" onclick="toggleForm()">Already have an account? Login</a>
                         </form>
                     </div>
+                </div>
+            </div>
+            <div id="forgotPasswordModal" class="modal">
+                <div class="modal-content">
+                    <div class="help-heading">
+                        <span class="close" onclick="closeForgotPasswordModal()">&times;</span>
+                        <h2>Forgot Password</h2>
+                    </div>
+                    <form>
+                        <div class="form-group">
+                            <label for="forgotEmail">Email:</label>
+                            <input type="text" id="forgotEmail" placeholder="Enter your email">
+                        </div>
+                        <button type="button" onclick="submitForgotPasswordForm()">Submit</button>
+                    </form>
                 </div>
             </div>
             <div id="helpModal" class="modal">
@@ -102,7 +117,7 @@
                 </div>
             </div>
             <footer>
-                <p>Designed and Developed for Ecom</p>
+                <p>Designed and Developed by Dinesh Korukonda</p>
                 <p>All rights reserved @2024</p>
             </footer>
         </div>
