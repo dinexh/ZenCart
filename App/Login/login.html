@@ -32,13 +32,13 @@
                     <div class="login-two" id="login-form">
                         <h1>Get started with login <br> happy shopping!</h1>
                         <form>
-                            <div class="email">
-                                <label>Email</label>
-                                <input type="text" placeholder="Enter your email">
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="text" id="email" placeholder="Enter your email">
                             </div>
-                            <div class="password">
-                                <label>Password</label>
-                                <input type="password" placeholder="Enter your password">
+                            <div class="form-group">
+                                <label for="password">Password:</label>
+                                <input type="password" id="password" placeholder="Enter your password">
                             </div>
                             <button type="button" onclick="verify()">Login</button>
                             <a href="#">Forgot Password?</a>
@@ -48,21 +48,21 @@
                     <div class="login-two" id="signup-form" style="display: none;">
                         <h1>Create your account</h1>
                         <form>
-                            <div class="email">
-                                <label>Email</label>
-                                <input type="text" placeholder="Enter your email">
+                            <div class="form-group">
+                                <label for="signup-email">Email</label>
+                                <input type="text" id="signup-email" placeholder="Enter your email">
                             </div>
-                            <div class="phone">
-                                <label>Phone Number</label>
-                                <input type="text" placeholder="Enter your phone number">
+                            <div class="form-group">
+                                <label for="signup-phone">Phone Number</label>
+                                <input type="text" id="signup-phone" placeholder="Enter your phone number">
                             </div>
-                            <div class="password">
-                                <label>Password</label>
-                                <input type="password" placeholder="Enter your password">
+                            <div class="form-group">
+                                <label for="signup-password">Password</label>
+                                <input type="password" id="signup-password" placeholder="Enter your password">
                             </div>
-                            <div class="password">
-                                <label>Confirm Password</label>
-                                <input type="password" placeholder="Confirm your password">
+                            <div class="form-group">
+                                <label for="confirm-password">Confirm Password</label>
+                                <input type="password" id="confirm-password" placeholder="Confirm your password">
                             </div>
                             <button type="button" onclick="signup()">Sign Up</button>
                             <a href="javascript:void(0);" onclick="toggleForm()">Already have an account? Login</a>
