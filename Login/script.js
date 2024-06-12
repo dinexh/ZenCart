@@ -10,3 +10,13 @@ function toggleForm() {
         signupForm.style.display = 'block';
     }
 }
+
+function verify() {
+    // Placeholder function for login verification
+    alert('Login verification is not implemented yet.');
+}
+
+function signup() {
+    // Placeholder function for sign up process
+    alert('Sign up process is not implemented yet.');
+}
