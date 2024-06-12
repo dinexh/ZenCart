@@ -11,12 +11,19 @@ function toggleForm() {
     }
 }
 
-function verify() {
-    // Placeholder function for login verification
-    alert('Login verification is not implemented yet.');
+function openHelpModal() {
+    document.getElementById('helpModal').style.display = 'block';
 }
 
-function signup() {
-    // Placeholder function for sign up process
-    alert('Sign up process is not implemented yet.');
+function closeHelpModal() {
+    document.getElementById('helpModal').style.display = 'none';
+}
+
+function submitHelpForm() {
+    var name = document.getElementById('helpName').value;
+    var email = document.getElementById('helpEmail').value;
+    var issue = document.getElementById('helpIssue').value;
+    var query = document.getElementById('helpQuery').value;
+    alert('Help form submitted:\nName: ' + name + '\nEmail: ' + email + '\nIssue: ' + issue + '\nQuery: ' + query);
+    closeHelpModal();
 }

@@ -5,17 +5,17 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-body{
-    background-color: #f1f1f1;
-}
 .container{
+    width: 100%;
+    height: 100vh;
+    background-color: #f1f1f1;
+    /* background-color: red; */
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} 
 .container-in{
-    /* padding: 1rem; */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -69,10 +69,15 @@ nav{
 .login-one
 {
     width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /* background-color: red; */
 }
 .login-one img{
-    mix-blend-mode: multiply    ;
+    mix-blend-mode: multiply;
+    /* width: 100%; */
+    /* height: auto; */
 }
 .login-two{
     width: 100%;
@@ -191,6 +196,98 @@ form{
     /* font-size: 1.3rem; */
 
 }
+/* Help Section starts here */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.help-heading {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.help-heading h2 {
+    margin: 0;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: none;
+}
+
+.modal-content button {
+    width: 100%;
+    padding: 10px;
+    background-color: orange;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.modal-content button:hover {
+    background-color: darkorange;
+}
+.close {
+    color: #aaa;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+/* Footer starts here */
 footer{
     width: 100%;
     padding: 1rem;
