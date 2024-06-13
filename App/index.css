@@ -9,10 +9,13 @@
     width: 100%;
 }
 .container-in{
+    width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+/* nav bar starts here */
 nav{
     width: 100%;
     padding: 1rem;
@@ -35,10 +38,76 @@ nav{
     background-color: orange;
     font-size: 0.8rem;
 }
-.nav-in-two h1{
-    font-size: 1.8rem;
-    font-weight: 800;
-    color: #333;
+.nav-in-two{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    background-color: #f3f3f3;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropbtn {
+    background-color: #e6e6e6;
+    color: black;
+    padding: 0.7rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px 0 0 5px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f3f3f3;
+    min-width: 180%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    /* width: 100%; */
+    padding: 1rem;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #ccc;
+}
+.nav-in-two input[type = text]
+{
+    width: 150%;
+    padding: 0.65rem;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    border-left: none;
+}
+.search-button {
+    background-color: #ffa41c;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-in-three button a{
+    text-decoration: none;
+    color: black;
 }
 .nav-in-three button{
     /* width: 80%; */
@@ -47,6 +116,15 @@ nav{
     background-color: orange;
     font-size: 0.8rem;
 }
-.nav-in button:hover{
-    background-color: #ff4500;
+/* nav bar ends here */
+/* footer starts here */
+footer{
+    width: 100%;
+    padding: 1rem;
+    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #333;
 }
