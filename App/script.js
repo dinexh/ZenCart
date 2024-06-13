@@ -1,21 +1,21 @@
-let currentSlide = 0;
-
-function showSlide(index) {
-    const slides = document.querySelectorAll('.slider-img');
-    if (index >= slides.length) {
-        currentSlide = 0;
-    } else if (index < 0) {
-        currentSlide = slides.length - 1;
-    } else {
-        currentSlide = index;
-    }
-    const offset = -currentSlide * 100;
-    document.querySelector('.slider-wrapper').style.transform = `translateX(${offset}%)`;
-}
+let slideIndex = 0;
+showDivs(slideIndex);
 
 function plusDivs(n) {
-    showSlide(currentSlide + n);
+    showDivs(slideIndex += n);
 }
 
-// Initialize the slider
-showSlide(currentSlide);
+function showDivs(n) {
+    let i;
+    let x = document.getElementsByClassName("slider-img");
+    if (n >= x.length) {
+        slideIndex = 0;
+    }    
+    if (n < 0) {
+        slideIndex = x.length - 1;
+    }
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+    }
+    x[slideIndex].style.display = "block";  
+}
