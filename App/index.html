@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,6 +34,13 @@
                         </button>
                     </div>
                     <div class="nav-in-three">
+                        <?php
+                        if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+                            echo $_SESSION['name']; // Display user's name
+                        } else {
+                            echo '<a href="/App/Login/login.html">Login</a>';
+                        }
+                        ?>
                         <button>
                             <a href="/App/Login/login.html">Login</a>
                         </button>

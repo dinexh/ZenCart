@@ -31,40 +31,40 @@
                 <div class="login-two-in">
                     <div class="login-two" id="login-form">
                         <h1>Get started with login <br> happy shopping!</h1>
-                        <form>
+                        <form action="/App/Backend/login.php" method="post">
                             <div class="form-group">
                                 <label for="email">Email:</label>
-                                <input type="text" id="email" placeholder="Enter your email">
+                                <input type="text" id="email" name="email" placeholder="Enter your email">
                             </div>
                             <div class="form-group">
                                 <label for="password">Password:</label>
-                                <input type="password" id="password" placeholder="Enter your password">
+                                <input type="password" id="password" name="password" placeholder="Enter your password">
                             </div>
-                            <button type="button" >Login</button>
+                            <button type="submit">Login</button>
                             <a href="#" onclick="openForgotPasswordModal()">Forgot Password?</a>
                             <button type="button" onclick="toggleForm()">Create an account</button>
                         </form>
                     </div>
                     <div class="login-two" id="signup-form" style="display: none;">
                         <h1>Create your account</h1>
-                        <form>
+                        <form action="/App/Backend/signup.php" method="post">
                             <div class="form-group">
                                 <label for="signup-email">Email</label>
-                                <input type="text" id="signup-email" placeholder="Enter your email">
+                                <input type="text" id="signup-email" name="signup-email" placeholder="Enter your email">
                             </div>
                             <div class="form-group">
                                 <label for="signup-phone">Phone Number</label>
-                                <input type="text" id="signup-phone" placeholder="Enter your phone number">
+                                <input type="text" id="signup-phone" name="signup-phone" placeholder="Enter your phone number">
                             </div>
                             <div class="form-group">
                                 <label for="signup-password">Password</label>
-                                <input type="password" id="signup-password" placeholder="Enter your password">
+                                <input type="password" id="signup-password" name="signup-password" placeholder="Enter your password">
                             </div>
                             <div class="form-group">
                                 <label for="confirm-password">Confirm Password</label>
-                                <input type="password" id="confirm-password" placeholder="Confirm your password">
+                                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password">
                             </div>
-                            <button type="button" onclick="signup()">Sign Up</button>
+                            <button type="submit">Sign Up</button>
                             <a href="" onclick="toggleForm()">Already have an account? Login</a>
                         </form>
                     </div>
