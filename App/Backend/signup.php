@@ -1,37 +1,54 @@
 <?php
-// Check if form is submitted
+session_start();
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+include 'db.php';
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Include database connection file
-    require_once('db_connect.php');
+    $email = $_POST['signup-email'];
+    $phone = $_POST['signup-phone'];
+    $password = $_POST['signup-password'];
+    $confirm_password = $_POST['confirm-password'];
 
-    // Escape user inputs for security
-    $email = mysqli_real_escape_string($conn, $_POST['signup-email']);
-    $phone = mysqli_real_escape_string($conn, $_POST['signup-phone']);
-    $password = mysqli_real_escape_string($conn, $_POST['signup-password']);
-    $confirm_password = mysqli_real_escape_string($conn, $_POST['confirm-password']);
-
-    // Perform validation (e.g., check if passwords match)
+    // Check if passwords match
     if ($password != $confirm_password) {
-        echo "Passwords do not match!";
+        echo "Passwords do not match.";
         exit();
     }
 
     // Hash the password
-    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+    $password_hashed = password_hash($password, PASSWORD_DEFAULT);
 
-    // SQL query to insert user into database
-    $sql = "INSERT INTO users (email, password, phone) VALUES ('$email', '$hashed_password', '$phone')";
+    // Check if email already exists
+    $stmt = $conn->prepare("SELECT id FROM users WHERE email = ?");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $stmt->store_result();
 
-    if ($conn->query($sql) === TRUE) {
-        echo "User registered successfully!";
-        // You can redirect to login page or any other page after successful registration
-        // header("Location: /App/index.html");
-        // exit();
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+    if ($stmt->num_rows > 0) {
+        echo "Email already taken.";
+        $stmt->close();
+        exit();
     }
 
-    // Close connection
+    // Insert new user
+    $stmt = $conn->prepare("INSERT INTO users (email, phone, password) VALUES (?, ?, ?)");
+    $stmt->bind_param("sss", $email, $phone, $password_hashed);
+
+    if ($stmt->execute()) {
+        // Set session variables
+        $_SESSION['email'] = $email;
+        $_SESSION['loggedin'] = true;
+        echo "Registration successful.";
+        // Redirect to a different page (e.g., home page)
+        header("Location: ../index.html");
+        exit();
+    } else {
+        echo "Error: " . $stmt->error;
+    }
+
+    $stmt->close();
     $conn->close();
 }
 ?>

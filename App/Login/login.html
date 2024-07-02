@@ -12,7 +12,7 @@
             <nav>
                 <div class="nav-in">
                     <div class="nav-in-one">
-                        <a href="/App/index.html">
+                        <a href="../index.html">
                             <button>Back Home</button>
                         </a>
                     </div>
@@ -31,7 +31,7 @@
                 <div class="login-two-in">
                     <div class="login-two" id="login-form">
                         <h1>Get started with login <br> happy shopping!</h1>
-                        <form action="/App/Backend/login.php" method="post">
+                        <form action="../backend/login.php" method="post">
                             <div class="form-group">
                                 <label for="email">Email:</label>
                                 <input type="text" id="email" name="email" placeholder="Enter your email">
@@ -42,12 +42,12 @@
                             </div>
                             <button type="submit">Login</button>
                             <a href="#" onclick="openForgotPasswordModal()">Forgot Password?</a>
-                            <button type="button" onclick="toggleForm()">Create an account</button>
                         </form>
+                        <button type="button" onclick="toggleForm()">Create an account</button>
                     </div>
                     <div class="login-two" id="signup-form" style="display: none;">
                         <h1>Create your account</h1>
-                        <form action="/App/Backend/signup.php" method="post">
+                        <form action="../backend/signup.php" method="post">
                             <div class="form-group">
                                 <label for="signup-email">Email</label>
                                 <input type="text" id="signup-email" name="signup-email" placeholder="Enter your email">
@@ -65,7 +65,7 @@
                                 <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password">
                             </div>
                             <button type="submit">Sign Up</button>
-                            <a href="" onclick="toggleForm()">Already have an account? Login</a>
+                            <a href="#" onclick="toggleForm()">Already have an account? Login</a>
                         </form>
                     </div>
                 </div>
