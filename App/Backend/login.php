@@ -19,22 +19,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bind_result($id, $password_hashed);
         $stmt->fetch();
 
-        // Verify password
         if (password_verify($password, $password_hashed)) {
-            // Set session variables
             $_SESSION['email'] = $email;
             $_SESSION['loggedin'] = true;
             echo "Login successful.";
-            // Redirect to a different page (e.g., home page)
             header("Location: ../index.html");
             exit();
         } else {
-            echo "Invalid password.";
+            echo "alert()";
         }
     } else {
-        echo "No account found with that email.";
+        echo "alertuser()";
     }
-
     $stmt->close();
     $conn->close();
 }

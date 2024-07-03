@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "ecommerce";
+$dbname = "Zencart";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
