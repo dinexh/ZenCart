@@ -23,7 +23,7 @@
 nav {
     width: 100%;
     padding: 0.5rem;
-    background-color: #f1f1f1;
+    /* background-color: #f1f1f1; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,7 +35,10 @@ nav {
     align-items: center;
     width: 100%;
 }
-
+.nav-in-one{
+    width: 20%;
+    background-color: red;
+}
 .nav-in-one h1 {
     margin: 0;
 }
@@ -110,21 +113,6 @@ nav {
     align-items: center;
     justify-content: center;
 }
-
-.nav-in-three button a {
-    text-decoration: none;
-    color: black;
-}
-
-.nav-in-three button {
-    padding: 0.5rem;
-    border-radius: 10px;
-    background-color: orange;
-    font-size: 0.8rem;
-}
-
-/* nav bar ends here */
-
 /* slider starts here */
 .slider {
     position: relative;

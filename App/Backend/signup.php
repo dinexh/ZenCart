@@ -6,6 +6,7 @@ error_reporting(E_ALL);
 include 'db.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST['signup-username'];
     $email = $_POST['signup-email'];
     $phone = $_POST['signup-phone'];
     $password = $_POST['signup-password'];
@@ -33,16 +34,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Insert new user
-    $stmt = $conn->prepare("INSERT INTO users (email, phone, password) VALUES (?, ?, ?)");
-    $stmt->bind_param("sss", $email, $phone, $password_hashed);
+    $stmt = $conn->prepare("INSERT INTO users (username, email, phone, password) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("ssss", $username, $email, $phone, $password_hashed);
 
     if ($stmt->execute()) {
         // Set session variables
+        $_SESSION['username'] = $username;
         $_SESSION['email'] = $email;
         $_SESSION['loggedin'] = true;
         echo "Registration successful.";
         // Redirect to a different page (e.g., home page)
-        header("Location: ../index.html");
+        header("Location: ../index.php");
         exit();
     } else {
         echo "Error: " . $stmt->error;

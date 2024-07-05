@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['loggedin'])) {
+    header("Location: login.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,17 +36,7 @@
                             <i class="fa fa-question-circle" style="font-size:1.4rem"></i>
                         </button>
                     </div>
-                    <div class="nav-in-three">
-                        <button>
-                            <a href="../App/Login/login.html">Login</a>
-                        </button>
-                        <button>
-                            <a href="#">Cart</a>
-                        </button>
-                        <button>
-                            <i class="fa fa-user" style="font-size:1rem"></i>
-                        </button>
-                    </div>
+                    
                 </div>
             </nav>
             <div class="slider">
