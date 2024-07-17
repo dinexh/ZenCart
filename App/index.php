@@ -10,8 +10,9 @@ include 'components/nav.php';
     <link rel="stylesheet" href="global.css">
 </head>
 <body>
-    <div class="main">
-    </div>
+    <?php
+    include 'components/carosul.php';
+    ?>
 </body>
 </html>
 <?php
